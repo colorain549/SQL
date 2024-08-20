@@ -1,13 +1,9 @@
 -- 6 查找重复数据
-
--- from
--- where
--- having
-
--- select
-
--- order by
--- limit
+-- 学号 姓名
+select
+    *
+from
+    学生表;
 
 -- 辅助表
 -- 姓名 计数
@@ -19,15 +15,8 @@ from
 group by
     姓名;
 
--- 查找重复数据
-select 
-    *
-from
-    () as t;
-where
-    计数 > 1;
-
--- 完整语句
+-- 使用group by
+-- 姓名
 select
     姓名
 from
@@ -37,12 +26,12 @@ from
     from
         学生表
     group by
-        姓名
-    ) as t
+        姓名) as t 
 where
     计数 > 1;
 
--- having 子句
+-- 使用having
+-- 姓名
 select
     姓名
 from
@@ -51,6 +40,3 @@ group by
     姓名
 having
     count(姓名) > 1;
-
-
-
