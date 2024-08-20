@@ -90,7 +90,7 @@
 
 ## 位置
 ```
-su test
+root
 acc: mysql -u root -p
 psw: 123
 use sql_test_c3
